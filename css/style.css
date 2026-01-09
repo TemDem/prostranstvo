@@ -571,6 +571,66 @@ textarea {
   opacity: 1;
   text-transform: uppercase
 }
+.animate-on-scroll {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+  transform: translateY(30px);
+  transition: opacity .6s ease-out,-webkit-transform .6s ease-out;
+  transition: opacity .6s ease-out,transform .6s ease-out;
+  transition: opacity .6s ease-out,transform .6s ease-out,-webkit-transform .6s ease-out
+}
+.animate-on-scroll.visible {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0)
+}
+.anim {
+  opacity: 0;
+  will-change: transform,opacity
+}
+.anim-fade-up {
+  -webkit-transform: translateY(30px);
+  transform: translateY(30px);
+  transition: opacity .6s ease,-webkit-transform .6s ease;
+  transition: opacity .6s ease,transform .6s ease;
+  transition: opacity .6s ease,transform .6s ease,-webkit-transform .6s ease
+}
+.anim-fade-down {
+  -webkit-transform: translateY(-30px);
+  transform: translateY(-30px);
+  transition: opacity .6s ease,-webkit-transform .6s ease;
+  transition: opacity .6s ease,transform .6s ease;
+  transition: opacity .6s ease,transform .6s ease,-webkit-transform .6s ease
+}
+.anim-fade-left {
+  -webkit-transform: translateX(-40px);
+  transform: translateX(-40px);
+  transition: opacity .6s ease,-webkit-transform .6s ease;
+  transition: opacity .6s ease,transform .6s ease;
+  transition: opacity .6s ease,transform .6s ease,-webkit-transform .6s ease
+}
+.anim-fade-right {
+  -webkit-transform: translateX(40px);
+  transform: translateX(40px);
+  transition: opacity .6s ease,-webkit-transform .6s ease;
+  transition: opacity .6s ease,transform .6s ease;
+  transition: opacity .6s ease,transform .6s ease,-webkit-transform .6s ease
+}
+.anim-zoom {
+  -webkit-transform: scale(.92);
+  transform: scale(.92);
+  transition: opacity .6s ease,-webkit-transform .6s ease;
+  transition: opacity .6s ease,transform .6s ease;
+  transition: opacity .6s ease,transform .6s ease,-webkit-transform .6s ease
+}
+.anim-slow {
+  transition-duration: 1s
+}
+.anim-show {
+  opacity: 1;
+  -webkit-transform: translate(0,0) scale(1);
+  transform: translate(0,0) scale(1)
+}
 .header {
   background-color: #fff;
   z-index: 4;
