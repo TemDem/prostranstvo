@@ -75,5 +75,21 @@
             });
         }));
         $(".input_tel").mask("+7 (000) 000-00-00");
+        function showOnScroll() {
+            $(".anim").each((function() {
+                let $el = $(this);
+                if ($el.hasClass("anim-show")) return;
+                let elementTop = $el.offset().top;
+                let windowBottom = $(window).scrollTop() + $(window).height() * .85;
+                if (windowBottom > elementTop) {
+                    let delay = $el.data("delay") || 0;
+                    setTimeout((() => {
+                        $el.addClass("anim-show");
+                    }), delay);
+                }
+            }));
+        }
+        showOnScroll();
+        $(window).on("scroll", showOnScroll);
     }));
 })();
